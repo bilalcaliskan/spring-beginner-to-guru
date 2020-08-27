@@ -1,13 +1,13 @@
-package com.bcaliskan.springbeginnertoguru;
+package com.bcaliskan.spring5webapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBeginnerToGuruApplication {
+public class Spring5webappApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBeginnerToGuruApplication.class, args);
+        SpringApplication.run(Spring5webappApplication.class, args);
     }
 
 }

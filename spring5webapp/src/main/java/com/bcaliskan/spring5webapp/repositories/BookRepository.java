@@ -1,6 +1,6 @@
-package com.bcaliskan.springbeginnertoguru.repositories;
+package com.bcaliskan.spring5webapp.repositories;
 
-import com.bcaliskan.springbeginnertoguru.models.Book;
+import com.bcaliskan.spring5webapp.models.Book;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

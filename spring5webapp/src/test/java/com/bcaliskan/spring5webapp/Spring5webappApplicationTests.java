@@ -1,10 +1,10 @@
-package com.bcaliskan.springbeginnertoguru;
+package com.bcaliskan.spring5webapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBeginnerToGuruApplicationTests {
+class Spring5webappApplicationTests {
 
     @Test
     void contextLoads() {

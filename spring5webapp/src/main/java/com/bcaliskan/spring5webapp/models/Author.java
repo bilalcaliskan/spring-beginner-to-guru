@@ -1,4 +1,4 @@
-package com.bcaliskan.springbeginnertoguru.models;
+package com.bcaliskan.spring5webapp.models;
 
 import javax.persistence.*;
 import java.util.HashSet;
