@@ -1,34 +1,36 @@
 package com.bcaliskan.sfgdi;
 
-import com.bcaliskan.sfgdi.controllers.ConstructorInjectedController;
-import com.bcaliskan.sfgdi.controllers.MyController;
-import com.bcaliskan.sfgdi.controllers.PropertyInjectedController;
-import com.bcaliskan.sfgdi.controllers.SetterInjectedController;
+import com.bcaliskan.sfgdi.controllers.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+@Slf4j
 @SpringBootApplication
 public class SfgDiApplication {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
         MyController myController = (MyController) ctx.getBean("myController");
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+        log.info("---------------I18nController");
+        log.info(i18nController.sayHello());
 
-        System.out.println("---------------Primary");
-        System.out.println(myController.sayHello());
+        log.info("---------------Primary");
+        log.info(myController.sayHello());
 
-        System.out.println("---------------Property");
+        log.info("---------------Property");
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
-        System.out.println(propertyInjectedController.getGreeting());
+        log.info(propertyInjectedController.getGreeting());
 
-        System.out.println("---------------Setter");
+        log.info("---------------Setter");
         SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
-        System.out.println(setterInjectedController.getGreeting());
+        log.info(setterInjectedController.getGreeting());
 
-        System.out.println("---------------Constructor");
+        log.info("---------------Constructor");
         ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
-        System.out.println(constructorInjectedController.getGreeting());
+        log.info(constructorInjectedController.getGreeting());
     }
 
 }
